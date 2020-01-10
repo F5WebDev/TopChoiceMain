@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.desktop-view {
+  display: none;
+}
+
+nav {
+  height: 150px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav img {
+  height: 120px;
+}
+
+.alt-container {
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+.main-container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  margin-top: 30px;
+
+/*  for animation*/
+  position: relative;
+  left: -100%;
+/*  animation: slideIn 1s forwards;*/
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+.main-container h1 {
+  font-size: 44px;
+}
+.main-container h2 {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+/*slide in animation*/
+@keyframes slideIn {
+  0% { left: -100%; transform: rotate(0deg); }
+  90% { left: 10%; transform: rotate(0deg); }
+  100% { left: 0%; transform: rotate(0deg); }
+}
+
+.banner-buttons {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+
+  /*  for animation*/
+  position: relative;
+  left: -100%;
+  /*animation: slideIn 1s 1s forwards;*/
+  animation: slideIn 1s forwards;
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+#oklahoma-btn {
+  border: 2px solid black;
+  background: black;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bolder;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+  background-image: linear-gradient(to right, black 50%, transparent 0%);
+  background-position: 100% 0%;
+  background-size: 200% 100%;
+  transition: 1s;
+  width: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#oklahoma-btn:hover {
+  color: white;
+  background-position: 0% 50%;
+}
+
+#texas-btn {
+  border: 1px solid blue;
+  background: blue;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  width: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*desktop view*/
+@media screen and (min-width: 800px) {
+  .alt-container, .mobile-view {
+    display: none;
+  }
+
+
+  .desktop-view {
+    display: flex;
+    width: 100%;
+  }
+  .desktop-left {
+    width: 50%;
+  }
+  .desktop-left img {
+    width: 100%;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .desktop-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .desktop-title {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .desktop-right h1 {
+    font-size: 50px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .desktop-right h2 {
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: lighter;
+  }
+  .desktop-buttons {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .desktop-buttons #oklahoma-btn {
+    width: 40%;
+  }
+  .desktop-buttons #texas-btn {
+    width: 40%;
+  }
+}
+
