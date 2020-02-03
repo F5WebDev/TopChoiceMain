@@ -18,6 +18,13 @@ nav img {
   height: 120px;
 }
 
+#desktop-video {
+  display: none;
+}
+#mobile-video {
+  display: block;
+}
+
 .alt-container {
   background-size: cover;
   background-position: center;
